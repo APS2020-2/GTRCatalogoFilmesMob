@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemListaFilmes_containerPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space4">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemListaFilme_cvImage"
+        android:layout_width="@dimen/space10"
+        android:layout_height="0dp"
+        app:cardCornerRadius="@dimen/space3"
+        app:layout_constraintBottom_toBottomOf="@+id/itemListaFilmes_tvValorDiretor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemListaFilmes_tvValorNomeFilme">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_sem_foto" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvValorNomeFilme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space4"
+        android:text="@string/valor"
+        android:textAppearance="@style/textAppearanceBoldBlack20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilme_cvImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/itemListaFilmes_ivMenu"
+        android:layout_width="@dimen/space7"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemListaFilmes_tvValorNomeFilme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_menu_24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvLabelGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space4"
+        android:layout_marginTop="@dimen/space2"
+        android:text="@string/genero_dois_pontos"
+        android:textAppearance="@style/textAppearanceBoldBlack14dp"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilme_cvImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemListaFilmes_tvValorNomeFilme" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvValorGenero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space2"
+        android:text="@string/valor"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemListaFilmes_tvLabelGenero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilmes_tvLabelGenero"
+        app:layout_constraintTop_toTopOf="@+id/itemListaFilmes_tvLabelGenero" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvLabelDuracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space4"
+        android:layout_marginTop="@dimen/space2"
+        android:text="@string/duracao_dois_pontos"
+        android:textAppearance="@style/textAppearanceBoldBlack14dp"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilme_cvImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemListaFilmes_tvLabelGenero" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvValorDuracao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space2"
+        android:text="@string/valor"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemListaFilmes_tvLabelDuracao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilmes_tvLabelDuracao"
+        app:layout_constraintTop_toTopOf="@+id/itemListaFilmes_tvLabelDuracao" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvLabelDataLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space4"
+        android:layout_marginTop="@dimen/space2"
+        android:text="@string/data_lancamento_dois_pontos"
+        android:textAppearance="@style/textAppearanceBoldBlack14dp"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilme_cvImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemListaFilmes_tvLabelDuracao" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvValorDataLancamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space2"
+        android:text="@string/valor"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemListaFilmes_tvLabelDataLancamento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilmes_tvLabelDataLancamento"
+        app:layout_constraintTop_toTopOf="@+id/itemListaFilmes_tvLabelDataLancamento" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvLabelIdiomaOriginal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space4"
+        android:layout_marginTop="@dimen/space2"
+        android:text="@string/idioma_original_dois_pontos"
+        android:textAppearance="@style/textAppearanceBoldBlack14dp"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilme_cvImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemListaFilmes_tvLabelDataLancamento" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvValorIdiomaOriginal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space2"
+        android:text="@string/valor"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemListaFilmes_tvLabelIdiomaOriginal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilmes_tvLabelIdiomaOriginal"
+        app:layout_constraintTop_toTopOf="@+id/itemListaFilmes_tvLabelIdiomaOriginal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvLabelDiretor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space4"
+        android:layout_marginTop="@dimen/space2"
+        android:text="@string/diretor_dois_pontos"
+        android:textAppearance="@style/textAppearanceBoldBlack14dp"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilme_cvImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemListaFilmes_tvLabelIdiomaOriginal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaFilmes_tvValorDiretor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space2"
+        android:text="@string/valor"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemListaFilmes_tvLabelDiretor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemListaFilmes_tvLabelDiretor"
+        app:layout_constraintTop_toTopOf="@+id/itemListaFilmes_tvLabelDiretor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

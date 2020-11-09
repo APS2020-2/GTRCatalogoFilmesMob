@@ -3,10 +3,10 @@ package com.catalogoFilmes.utils;
 import android.content.Context;
 
 import com.aps2020.CatalogoFilmes.R;
-import com.catalogoFilmes.activitys.IdiomaOriginalVO;
 import com.catalogoFilmes.componentes.SpinnerCustom;
 import com.catalogoFilmes.model.DiretorVO;
 import com.catalogoFilmes.model.GeneroVO;
+import com.catalogoFilmes.model.IdiomaOriginalVO;
 
 import java.util.ArrayList;
 import java.util.HashMap;

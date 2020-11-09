@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialogCustom_rootView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/grey100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dialogCustom_icTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/space5"
+            app:layout_constraintBottom_toBottomOf="@+id/dialogCustom_tvTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dialogCustom_tvTitulo"
+            app:srcCompat="@drawable/ic_round_warning_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dialogCustom_tvTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space3"
+            android:layout_marginTop="@dimen/space5"
+            android:layout_marginEnd="@dimen/space5"
+            android:fontFamily="@font/titilliumweb_bold"
+            android:text="@string/valor"
+            android:textColor="@color/default_white"
+            android:textSize="@dimen/font16"
+            app:layout_constraintBottom_toTopOf="@+id/dialogCustom_divider1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dialogCustom_icTitulo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/dialogCustom_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/space2"
+            android:layout_marginTop="@dimen/space5"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/dialogCustom_tvMensagem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogCustom_tvTitulo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dialogCustom_tvMensagem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space5"
+            android:fontFamily="@font/titilliumweb_regular"
+            android:text="@string/valor"
+            android:textColor="@color/default_white"
+            android:textSize="@dimen/font14"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/dialogCustom_containerProgress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogCustom_divider1" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/dialogCustom_containerProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/dialogCustom_container2Botoes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogCustom_tvMensagem">
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppCompat.Progress" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space3"
+                android:fontFamily="@font/titilliumweb_regular"
+                android:text="@string/tentando_conexao_servidor"
+                android:textColor="@color/default_white"
+                android:textSize="@dimen/font14" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:id="@+id/dialogCustom_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/space2"
+            android:layout_marginTop="@dimen/space5"
+            android:background="@color/colorAccent"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogCustom_tvMensagem" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/dialogCustom_container2Botoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space5"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/dialogCustom_btUnico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogCustom_containerProgress">
+
+            <com.catalogoFilmes.componentes.ButtomCustom
+                android:id="@+id/dialogCustom_btEsquerda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space3"
+                android:layout_weight="1"
+                app:backgroundButton="@drawable/selector_bt_salvar"
+                app:layout_constraintTop_toBottomOf="@+id/divider2"
+                app:textButton="@string/iniciar" />
+
+            <com.catalogoFilmes.componentes.ButtomCustom
+                android:id="@+id/dialogCustom_btDireita"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space3"
+                android:layout_weight="1"
+                app:backgroundButton="@drawable/selector_bt_cancelar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2"
+                app:textButton="@string/iniciar" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.catalogoFilmes.componentes.ButtomCustom
+            android:id="@+id/dialogCustom_btUnico"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space5"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogCustom_container2Botoes"
+            app:textButton="@string/iniciar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

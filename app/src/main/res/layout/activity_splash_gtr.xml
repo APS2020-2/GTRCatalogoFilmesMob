@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey100"
+    tools:context="com.catalogoFilmes.activitys.SplashGTR">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/SplashScreen_imLogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo"
+        app:layout_constraintBottom_toTopOf="@+id/SplashScreen_pbCarregamento"
+        app:layout_constraintEnd_toStartOf="@+id/SplashScreen_guideline2"
+        app:layout_constraintStart_toStartOf="@+id/SplashScreen_guideline1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/SplashScreen_pbCarregamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space4"
+        android:theme="@style/AppCompat.Progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SplashScreen_imLogo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/SplashScreen_guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/SplashScreen_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space5"
+        android:fontFamily="@font/titilliumweb_bold"
+        android:gravity="center"
+        android:text="@string/criado_por"
+        android:textColor="@color/default_white"
+        android:textSize="@dimen/font14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

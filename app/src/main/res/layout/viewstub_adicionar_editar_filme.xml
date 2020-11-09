@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space5">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vsAddEditar_tvlabelTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textAppearance="@style/textAppearanceBoldAccent14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/vsAddEditar_etTitulo"
+        style="@style/textAppearanceRegularBlack14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space2"
+
+        android:background="@drawable/shape_fundo_componentes"
+        android:hint="@string/titulo"
+        android:inputType="text|textCapWords"
+        android:paddingHorizontal="@dimen/space3"
+        android:paddingVertical="10dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_tvlabelTitulo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vsAddEditar_tvlabelGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space3"
+        android:text="@string/genero"
+        android:textAppearance="@style/textAppearanceBoldAccent14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_etTitulo" />
+
+    <com.catalogoFilmes.componentes.SpinnerCustom
+        android:id="@+id/vsAddEditar_spGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space2"
+        android:background="@drawable/shape_fundo_spinner"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_tvlabelGenero" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vsAddEditar_tvlabelDuracao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space3"
+        android:text="@string/duracao"
+        android:textAppearance="@style/textAppearanceBoldAccent14dp"
+        app:layout_constraintEnd_toEndOf="@+id/vsAddEditar_etDuracao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_spGenero" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/vsAddEditar_etDuracao"
+        style="@style/textAppearanceRegularBlack14dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space2"
+
+        android:layout_marginEnd="@dimen/space3"
+        android:background="@drawable/shape_fundo_componentes"
+        android:hint="@string/duracao"
+        android:inputType="number"
+        android:paddingHorizontal="@dimen/space3"
+        android:paddingVertical="10dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toStartOf="@+id/vsAddEditar_spIdioma"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_tvlabelDuracao" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vsAddEditar_tvlabelIdioma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space3"
+        android:text="@string/idioma_original"
+        android:textAppearance="@style/textAppearanceBoldAccent14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vsAddEditar_spIdioma"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_spGenero" />
+
+    <com.catalogoFilmes.componentes.SpinnerCustom
+        android:id="@+id/vsAddEditar_spIdioma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space3"
+        android:layout_marginTop="@dimen/space2"
+        android:background="@drawable/shape_fundo_spinner"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/vsAddEditar_etDuracao"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_tvlabelIdioma" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vsAddEditar_tvLabelDataLancamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space3"
+        android:text="@string/data_lancamento"
+        android:textAppearance="@style/textAppearanceBoldAccent14dp"
+        app:layout_constraintEnd_toEndOf="@+id/vsAddEditar_etDataLancamento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_etDuracao" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/vsAddEditar_etDataLancamento"
+        style="@style/textAppearanceRegularBlack14dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space2"
+        android:layout_marginEnd="@dimen/space3"
+
+        android:background="@drawable/shape_fundo_componentes"
+        android:hint="@string/data_lancamento"
+        android:inputType="date"
+        android:paddingHorizontal="@dimen/space3"
+        android:paddingVertical="10dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toStartOf="@+id/vsAddEditar_spDiretor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_tvLabelDataLancamento" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vsAddEditar_tvLabelDiretor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space3"
+        android:text="@string/diretor"
+        android:textAppearance="@style/textAppearanceBoldAccent14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vsAddEditar_spDiretor"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_etDuracao" />
+
+    <com.catalogoFilmes.componentes.SpinnerCustom
+        android:id="@+id/vsAddEditar_spDiretor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space3"
+        android:layout_marginTop="@dimen/space2"
+        android:background="@drawable/shape_fundo_spinner"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/vsAddEditar_etDataLancamento"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_tvLabelDiretor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vsAddEditar_tvLabelDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space3"
+        android:text="@string/sinopse"
+        android:textAppearance="@style/textAppearanceBoldAccent14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_etDataLancamento" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/vsAddEditar_etDescricao"
+        style="@style/textAppearanceRegularBlack14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space2"
+        android:background="@drawable/shape_fundo_componentes"
+        android:gravity="start"
+        android:hint="@string/sinopse"
+        android:inputType="textMultiLine|text|textCapSentences"
+        android:minHeight="@dimen/space10"
+        android:paddingHorizontal="@dimen/space3"
+        android:paddingVertical="10dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vsAddEditar_tvLabelDescricao" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

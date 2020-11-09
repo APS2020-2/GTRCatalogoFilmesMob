@@ -1,10 +1,139 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+
+    <style name="AppCompat" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/default_white</item>
+        <item name="android:textColorSecondary">@color/default_black</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppCompat.TelaInicial" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/default_black</item>
+        <item name="colorPrimaryDark">@color/default_black</item>
+        <item name="android:colorBackground">@color/default_black</item>
+        <item name="android:textColorPrimary">@color/default_white</item>
+        <item name="android:textColorSecondary">@color/default_black</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppCompat.MenuPrincipal" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/default_black</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppCompat.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="dialogCornerRadius">@dimen/space5</item>
+    </style>
+
+    <style name="AppCompat.Progress" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/colorAccent</item>
+    </style>
+
+    <style name="AppCompat.Animacao" parent="AppCompat.MenuPrincipal">
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="AppCompat.PopupOverlay" parent="">
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:activityOpenExitAnimation">@anim/nothing</item>
+        <item name="android:activityCloseEnterAnimation">@anim/nothing</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_in_down</item>
+    </style>
+
+    <!--    <style name="shape_coloraccent_radius12">-->
+    <!--        <item name="android:windowBackground"></item>-->
+    <!--    </style>-->
+
+    <!--    <style name="appCompat.dialog" parent="Theme.AppCompat.Light.Dialog">-->
+    <!--        <item name="colorPrimary">@color/primary</item>-->
+    <!--        <item name="colorPrimaryDark">@color/primary_dark</item>-->
+    <!--        <item name="colorSecondary">@color/secondary</item>-->
+    <!--        <item name="colorAccent">@color/accent600</item>-->
+    <!--        <item name="android:colorBackground">@color/branco</item>-->
+    <!--        <item name="android:textColorPrimary">@color/textPrimary</item>-->
+    <!--        <item name="android:textColorSecondary">@color/textSecondary</item>-->
+    <!--        <item name="android:textColorTertiary">@color/textTertiary</item>-->
+    <!--        <item name="android:fontFamily">@font/titilliumweb</item>-->
+    <!--        <item name="windowActionBar">false</item>-->
+    <!--        <item name="windowNoTitle">false</item>-->
+    <!--    </style>-->
+
+    <!--Appearance-->
+    <style name="textAppearanceBoldAccent20dp">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/font20</item>
+        <item name="android:fontFamily">@font/titilliumweb_bold</item>
+    </style>
+
+    <style name="textAppearanceBoldAccent16dp">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/font16</item>
+        <item name="android:fontFamily">@font/titilliumweb_bold</item>
+    </style>
+
+    <style name="textAppearanceRegularAccent18dp">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/font18</item>
+        <item name="android:fontFamily">@font/titilliumweb_regular</item>
+    </style>
+
+    <style name="textAppearanceRegularAccent14dp">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/font14</item>
+        <item name="android:fontFamily">@font/titilliumweb_regular</item>
+    </style>
+
+    <style name="textAppearanceBoldAccent14dp">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/font14</item>
+        <item name="android:fontFamily">@font/titilliumweb_bold</item>
+    </style>
+
+    <style name="textAppearanceBoldBlack14dp">
+        <item name="android:textColor">@color/default_black</item>
+        <item name="android:textSize">@dimen/font14</item>
+        <item name="android:fontFamily">@font/titilliumweb_bold</item>
+    </style>
+
+    <style name="textAppearanceRegularBlack14dp">
+        <item name="android:textColor">@color/default_black</item>
+        <item name="android:textSize">@dimen/font14</item>
+        <item name="android:fontFamily">@font/titilliumweb_regular</item>
+    </style>
+
+    <style name="textAppearanceBoldBlack20dp">
+        <item name="android:textColor">@color/default_black</item>
+        <item name="android:textSize">@dimen/font20</item>
+        <item name="android:fontFamily">@font/titilliumweb_bold</item>
+    </style>
+
+    <style name="textAppearanceBoldWhite12dp">
+        <item name="android:textColor">@color/default_white</item>
+        <item name="android:textSize">@dimen/font12</item>
+        <item name="android:fontFamily">@font/titilliumweb_bold</item>
+    </style>
+
+    <style name="textAppearanceBoldWhite14dp">
+        <item name="android:textColor">@color/default_white</item>
+        <item name="android:textSize">@dimen/font14</item>
+        <item name="android:fontFamily">@font/titilliumweb_bold</item>
     </style>
 
 </resources>

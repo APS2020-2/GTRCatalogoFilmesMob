@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_black"
+    tools:context="com.catalogoFilmes.activitys.PaginaInicial">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/pafinaInicial_ivFundo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="foto"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pagina_inicial"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/pafinaInicial_ivLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SplashScreen_guideline3"
+        app:srcCompat="@mipmap/logo_texto" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/SplashScreen_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pafinaInicial_btIniciar"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space9"
+        android:layout_marginTop="@dimen/space6"
+        android:background="@drawable/selector_botao_default"
+        android:text="@string/iniciar"
+        android:textAllCaps="true"
+        android:textAppearance="@style/textAppearanceBoldWhite14dp"
+        android:textSize="@dimen/font20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pafinaInicial_ivLogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

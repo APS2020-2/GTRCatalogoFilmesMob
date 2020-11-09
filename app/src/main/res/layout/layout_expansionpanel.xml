@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/expansionpanel_rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space2"
+    android:layout_marginBottom="@dimen/space2"
+    android:background="@drawable/selector_item_lista"
+    android:orientation="vertical">
+
+    <com.catalogoFilmes.componentes.expansion.ExpansionHeader
+        android:id="@+id/expansionpanel_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expansionHeaderIndicator="@id/expansionpanel_indicador"
+        app:expansionLayoutHeader="@id/expansionpanel_expansion"
+        app:expansionToggleOnClick="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/expansionpanel_viewStubHeaderInflate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ViewStub
+                    android:id="@+id/expansionpanel_viewStubHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/expansionpanel_indicador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expansionpanel_viewStubHeaderInflate"
+                app:srcCompat="@drawable/ic_seta_baixo_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.catalogoFilmes.componentes.expansion.ExpansionHeader>
+
+    <com.catalogoFilmes.componentes.expansion.ExpansionLayout
+        android:id="@+id/expansionpanel_expansion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ViewStub
+            android:id="@+id/expansionpanel_viewStubLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.catalogoFilmes.componentes.expansion.ExpansionLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

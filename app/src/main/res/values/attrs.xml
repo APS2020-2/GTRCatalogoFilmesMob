@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ButtomCustom">
+        <attr name="srcButton" format="reference" />
+        <attr name="backgroundButton" format="reference" />
+        <attr name="textButton" format="string" />
+        <attr name="paddingHorizontalButton" format="dimension" />
+        <attr name="textAppearanceButton" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpansionLayout">
+        <attr name="expansionExpanded" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpansionHeader">
+        <attr name="expansionLayoutHeader" format="reference" />
+        <attr name="expansionToggleOnClick" format="boolean" />
+        <attr name="expansionHeaderIndicator" format="reference" />
+        <attr name="expansionHeaderIndicatorRotationExpanded" format="integer" />
+        <attr name="expansionHeaderIndicatorRotationCollapsed" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpansionPanel">
+        <attr name="expansionLayout" format="reference" />
+        <attr name="expansionHeader" format="reference" />
+    </declare-styleable>
+</resources>

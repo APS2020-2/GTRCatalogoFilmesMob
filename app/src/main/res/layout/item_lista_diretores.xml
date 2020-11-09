@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemListaDiretores_containerPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space4">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemListaDiretores_cvImage"
+        android:layout_width="@dimen/space10"
+        android:layout_height="150dp"
+        app:cardCornerRadius="@dimen/space3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemListaDiretores_tvValorNomeDiretor">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_sem_foto" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaDiretores_tvValorNomeDiretor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space4"
+        android:text="@string/valor"
+        android:textAppearance="@style/textAppearanceBoldBlack20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemListaDiretores_cvImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaDiretores_tvLabelDataNasc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space4"
+        android:layout_marginTop="@dimen/space2"
+        android:text="@string/data_nascimento_dois_pontos"
+        android:textAppearance="@style/textAppearanceBoldBlack14dp"
+        app:layout_constraintStart_toEndOf="@+id/itemListaDiretores_cvImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemListaDiretores_tvValorNomeDiretor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaDiretores_tvValorDataNasc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space2"
+        android:text="@string/valor"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemListaDiretores_tvLabelDataNasc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemListaDiretores_tvLabelDataNasc"
+        app:layout_constraintTop_toTopOf="@+id/itemListaDiretores_tvLabelDataNasc" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaDiretores_tvLabelListaFilmes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space4"
+        android:layout_marginTop="@dimen/space2"
+        android:text="@string/lista_filmes_dois_pontos"
+        android:textAppearance="@style/textAppearanceBoldBlack14dp"
+        app:layout_constraintStart_toEndOf="@+id/itemListaDiretores_cvImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemListaDiretores_tvLabelDataNasc" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemListaDiretores_tvValorListaFilmes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/valor"
+        android:textAppearance="@style/textAppearanceRegularBlack14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/itemListaDiretores_tvLabelListaFilmes"
+        app:layout_constraintTop_toBottomOf="@+id/itemListaDiretores_tvLabelListaFilmes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

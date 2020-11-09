@@ -8,7 +8,7 @@
     <string name="cancelar">Cancelar</string>
     <string name="carregando_dados">Carregando Dados</string>
     <string name="catalogo_filmes">Catálogo de Filmes</string>
-    <string name="confirmacao">Confirmação</string>
+    <string name="confirmacao">Comfirmação</string>
     <string name="confirmar">confirmar</string>
     <string name="criado_por">Criado por GTR Soluções</string>
     <string name="data_lancamento">Data Lançamento</string>
@@ -48,7 +48,7 @@
     <string name="idioma_original_dois_pontos">Idioma Original:</string>
     <string name="imagembotao">imagemBotao</string>
     <string name="iniciar">Iniciar</string>
-    <string name="lista_filmes_dois_pontos">Lista de Filmes</string>
+    <string name="lista_filmes_dois_pontos">Lista de Filmes:</string>
     <string name="modo_escuro">Modo Escuro</string>
     <string name="nao">Não</string>
     <string name="salvar">Salvar</string>
